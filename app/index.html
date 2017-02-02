@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  .top-buffer { margin-top:20px; }
+  </style>
+  <script src="js/angular.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="contactApp"> 
+
+  <div class="wrapper col-md-6 col-md-offset-3 top-buffer" ng-controller="contactform">
+  <h2 class="text-center">Contact Form</h2>
+    <form class="form-horizontal top-buffer">
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="Name">Name:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" ng-model="contact.name" id="Name" placeholder="Enter Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="mn">Mobile Number:</label>
+        <div class="col-sm-9"> 
+          <input type="text" class="form-control" id="mn" ng-model="contact.mobile" placeholder="Enter Mobile #">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="email">Email:</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="email" ng-model="contact.email" placeholder="Enter email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="Address">Address:</label>
+        <div class="col-sm-9">
+          <textarea  class="form-control" id="Address" ng-model="contact.address" placeholder="Enter Address"></textarea> 
+        </div>
+      </div>
+
+      <div class="form-group"> 
+        <div class="col-sm-offset-3 col-sm-9">
+          <button type="submit" class="btn btn-default" ng-click="addContact(contact)">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
